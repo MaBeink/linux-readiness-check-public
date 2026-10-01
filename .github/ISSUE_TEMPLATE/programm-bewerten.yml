@@ -1,0 +1,46 @@
+name: Programm bewerten
+description: Teile deine Erfahrung, wie gut ein Programm unter Linux läuft.
+title: "[Bewertung] "
+labels: ["bewertung"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Danke fürs Mitmachen! Bitte bewerte nur Programme, die du unter Linux selbst ausprobiert hast.
+        Schreibe keine persönlichen Daten in dieses Formular, es ist öffentlich.
+  - type: input
+    id: program
+    attributes:
+      label: Programm
+      description: Name, wie er unter Windows installiert erscheint.
+      placeholder: zum Beispiel Affinity Photo 2
+    validations:
+      required: true
+  - type: dropdown
+    id: rating
+    attributes:
+      label: Wie läuft es unter Linux?
+      options:
+        - läuft (ohne Probleme oder mit nativer Version)
+        - Umweg (mit Einschränkungen, Web-Version, Wine/Proton oder Alternative)
+        - schwierig (läuft nicht oder nur mit großem Aufwand)
+    validations:
+      required: true
+  - type: textarea
+    id: solution
+    attributes:
+      label: Lösung oder Alternative
+      description: Wie hast du es zum Laufen gebracht, oder was nutzt du stattdessen?
+      placeholder: zum Beispiel läuft über Flatpak, oder Alternative GIMP
+  - type: input
+    id: distribution
+    attributes:
+      label: Distribution
+      placeholder: zum Beispiel Linux Mint 22, Fedora 41, CachyOS
+  - type: checkboxes
+    id: consent
+    attributes:
+      label: Veröffentlichung
+      options:
+        - label: Ich bin einverstanden, dass meine Angaben unter CC BY 4.0 in die Programmliste einfließen.
+          required: true

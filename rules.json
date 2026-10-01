@@ -1,0 +1,1026 @@
+{
+  "schema_version": 1,
+  "rules_version": "2026-10-01.1",
+  "rules": [
+    {
+      "name": "Firefox",
+      "aliases": ["Mozilla Firefox", "Firefox Browser"],
+      "readiness": "green",
+      "category": "Browser",
+      "reason": "Native Linux-Version vorhanden"
+    },
+    {
+      "name": "Microsoft Office",
+      "aliases": [
+        "Microsoft Office Professional Plus",
+        "Microsoft 365 Apps",
+        "Microsoft 365 Apps for Enterprise",
+        "Microsoft Office"
+      ],
+      "readiness": "yellow",
+      "category": "Office",
+      "reason": "Keine vollwertige native Linux-Version. Web-Version oder Alternativen möglich, aber Makros und Formatierung können problematisch sein.",
+      "alternatives": ["LibreOffice", "OnlyOffice", "Microsoft 365 Web"]
+    },
+    {
+      "name": "Xbox Game Pass",
+      "aliases": ["Xbox", "Xbox App", "Game Pass"],
+      "readiness": "red",
+      "category": "Gaming",
+      "reason": "Kein vollwertiger nativer Linux-Ersatz für die Windows-Xbox-App.",
+      "alternatives": ["Windows Dualboot", "Cloud Gaming"]
+    },
+    {
+      "name": "7-Zip",
+      "aliases": ["7-Zip"],
+      "readiness": "green",
+      "category": "Tools",
+      "reason": "Unter Linux gibt es 7-Zip/p7zip und viele Archivmanager mit 7z-Unterstützung."
+    },
+    {
+      "name": "GitHub Desktop",
+      "aliases": ["GitHub Desktop"],
+      "readiness": "yellow",
+      "category": "Development",
+      "reason": "GitHub Desktop hat keinen offiziellen Linux-Build. Git und GitHub-Workflows sind unter Linux aber gut mit anderen Clients möglich.",
+      "alternatives": ["Git", "GitKraken", "Fork", "Visual Studio Code"]
+    },
+    {
+      "name": "Git",
+      "aliases": ["Git"],
+      "readiness": "green",
+      "category": "Development",
+      "reason": "Git ist unter Linux nativ verfügbar."
+    },
+    {
+      "name": "VLC",
+      "aliases": ["VLC media player"],
+      "readiness": "green",
+      "category": "Media",
+      "reason": "VLC ist unter Linux nativ verfügbar."
+    },
+    {
+      "name": "Blender",
+      "aliases": ["Blender"],
+      "readiness": "green",
+      "category": "Creative",
+      "reason": "Blender ist unter Linux nativ verfügbar."
+    },
+    {
+      "name": "OBS Studio",
+      "aliases": ["OBS Studio"],
+      "readiness": "green",
+      "category": "Streaming",
+      "reason": "OBS Studio ist unter Linux nativ verfügbar."
+    },
+    {
+      "name": "Audacity",
+      "aliases": ["Audacity"],
+      "readiness": "green",
+      "category": "Audio",
+      "reason": "Audacity ist unter Linux nativ verfügbar."
+    },
+    {
+      "name": "HandBrake",
+      "aliases": ["HandBrake"],
+      "readiness": "green",
+      "category": "Video",
+      "reason": "HandBrake ist unter Linux nativ verfügbar."
+    },
+    {
+      "name": "Inkscape",
+      "aliases": ["Inkscape"],
+      "readiness": "green",
+      "category": "Creative",
+      "reason": "Inkscape ist unter Linux nativ verfügbar."
+    },
+    {
+      "name": "Google Chrome",
+      "aliases": ["Google Chrome", "Chrome"],
+      "readiness": "green",
+      "category": "Browser",
+      "reason": "Google Chrome ist unter Linux verfügbar."
+    },
+    {
+      "name": "Microsoft Edge",
+      "aliases": ["Microsoft Edge"],
+      "readiness": "green",
+      "category": "Browser",
+      "reason": "Microsoft Edge ist unter Linux verfügbar."
+    },
+    {
+      "name": "Brave Browser",
+      "aliases": ["Brave", "Brave Browser"],
+      "readiness": "green",
+      "category": "Browser",
+      "reason": "Brave ist unter Linux verfügbar."
+    },
+    {
+      "name": "Opera",
+      "aliases": ["Opera", "Opera Browser"],
+      "readiness": "green",
+      "category": "Browser",
+      "reason": "Opera ist unter Linux verfügbar."
+    },
+    {
+      "name": "Steam",
+      "aliases": ["Steam"],
+      "readiness": "green",
+      "category": "Gaming",
+      "reason": "Steam ist unter Linux verfügbar. Die Steam-App selbst ist unkritisch, einzelne Spiele müssen aber separat geprüft werden."
+    },
+    {
+      "name": "Epic Games Launcher",
+      "aliases": ["Epic Games Launcher"],
+      "readiness": "yellow",
+      "category": "Gaming",
+      "reason": "Kein offizieller nativer Linux-Client. Viele Spiele lassen sich über Heroic Games Launcher oder Lutris starten, aber nicht alle.",
+      "alternatives": ["Heroic Games Launcher", "Lutris", "Windows Dualboot"]
+    },
+    {
+      "name": "Battle.net",
+      "aliases": ["Battle.net"],
+      "readiness": "yellow",
+      "category": "Gaming",
+      "reason": "Kein offizieller nativer Linux-Client, läuft aber oft über Wine/Lutris/Proton. Spiele einzeln prüfen.",
+      "alternatives": ["Lutris", "Bottles", "Windows Dualboot"]
+    },
+    {
+      "name": "EA app",
+      "aliases": ["EA app"],
+      "readiness": "yellow",
+      "category": "Gaming",
+      "reason": "Kein offizieller nativer Linux-Client. Funktion kann je nach Spiel und Launcher-Version schwanken.",
+      "alternatives": ["Lutris", "Steam/Proton falls Spiel dort vorhanden", "Windows Dualboot"]
+    },
+    {
+      "name": "Ubisoft Connect",
+      "aliases": ["Ubisoft Connect"],
+      "readiness": "yellow",
+      "category": "Gaming",
+      "reason": "Kein offizieller nativer Linux-Client. Einige Spiele funktionieren über Wine/Proton, andere können problematisch sein.",
+      "alternatives": ["Lutris", "Steam/Proton", "Windows Dualboot"]
+    },
+    {
+      "name": "GOG Galaxy",
+      "aliases": ["GOG Galaxy", "GOG GALAXY"],
+      "readiness": "yellow",
+      "category": "Gaming",
+      "reason": "Kein offizieller nativer Linux-Client. GOG-Spiele können oft über Heroic Games Launcher, Lutris oder manuelle Installer genutzt werden.",
+      "alternatives": ["Heroic Games Launcher", "Lutris", "Bottles", "Windows Dualboot"]
+    },
+    {
+      "name": "DaVinci Resolve",
+      "aliases": ["DaVinci Resolve"],
+      "readiness": "green",
+      "category": "Video",
+      "reason": "DaVinci Resolve ist offiziell für Linux verfügbar. Für den konkreten Workflow sollten GPU, Distribution und Codec-Unterstützung trotzdem separat geprüft werden."
+    },
+    {
+      "name": "Adobe Photoshop",
+      "aliases": ["Adobe Photoshop", "Photoshop"],
+      "readiness": "red",
+      "category": "Creative",
+      "reason": "Keine native Linux-Version. Für professionelle Adobe-Workflows bleibt Windows oder macOS oft nötig.",
+      "alternatives": ["GIMP", "Krita", "Photopea", "Windows Dualboot"]
+    },
+    {
+      "name": "Adobe Premiere Pro",
+      "aliases": ["Adobe Premiere Pro", "Premiere Pro"],
+      "readiness": "red",
+      "category": "Video",
+      "reason": "Keine native Linux-Version. Adobe-Premiere-Workflows sind unter Linux problematisch.",
+      "alternatives": ["DaVinci Resolve", "Kdenlive", "Windows Dualboot"]
+    },
+    {
+      "name": "Adobe Illustrator",
+      "aliases": ["Adobe Illustrator", "Illustrator"],
+      "readiness": "red",
+      "category": "Creative",
+      "reason": "Keine native Linux-Version. Komplexe Adobe-Workflows sind unter Linux schwierig zu ersetzen.",
+      "alternatives": ["Inkscape", "Affinity über Windows/macOS", "Windows Dualboot"]
+    },
+    {
+      "name": "Elgato Wave Link",
+      "aliases": ["Elgato Wave Link"],
+      "readiness": "red",
+      "category": "Audio",
+      "reason": "Elgato Wave Link ist stark auf Windows/macOS ausgelegt. Unter Linux gibt es keinen gleichwertigen offiziellen Workflow.",
+      "alternatives": ["PipeWire", "EasyEffects", "OBS Audio-Mixer", "Windows Dualboot"]
+    },
+    {
+      "name": "Elgato Stream Deck",
+      "aliases": ["Elgato Stream Deck"],
+      "readiness": "yellow",
+      "category": "Hardware",
+      "reason": "Offizieller Linux-Support ist eingeschränkt. Es gibt Community-Lösungen, aber nicht immer mit vollem Funktionsumfang.",
+      "alternatives": ["streamdeck-ui", "Boatswain", "Windows Dualboot"]
+    },
+    {
+      "name": "LibreOffice",
+      "aliases": ["LibreOffice"],
+      "readiness": "green",
+      "category": "Office",
+      "reason": "LibreOffice ist unter Linux nativ verfügbar."
+    },
+    {
+      "name": "SoftMaker FreeOffice",
+      "aliases": ["SoftMaker FreeOffice", "FreeOffice"],
+      "readiness": "green",
+      "category": "Office",
+      "reason": "SoftMaker FreeOffice ist für Linux verfügbar."
+    },
+    {
+      "name": "Visual Studio Code",
+      "aliases": ["Visual Studio Code", "Microsoft Visual Studio Code", "VS Code"],
+      "readiness": "green",
+      "category": "Development",
+      "reason": "Visual Studio Code ist unter Linux nativ verfügbar."
+    },
+    {
+      "name": "Visual Studio",
+      "aliases": ["Microsoft Visual Studio", "Visual Studio Community", "Visual Studio Professional", "Visual Studio Enterprise"],
+      "readiness": "red",
+      "category": "Development",
+      "reason": "Die vollwertige Visual-Studio-IDE ist nicht nativ für Linux verfügbar. .NET- und Web-Workflows lassen sich oft umstellen, Windows-spezifische Projekte nicht immer.",
+      "alternatives": ["Visual Studio Code", "JetBrains Rider", ".NET CLI", "Windows Dualboot"]
+    },
+    {
+      "name": "Docker Desktop",
+      "aliases": ["Docker Desktop"],
+      "readiness": "yellow",
+      "category": "Development",
+      "reason": "Docker selbst ist unter Linux nativ sehr gut nutzbar. Docker Desktop für Linux existiert, der Workflow kann sich aber gegenüber Windows/WSL ändern.",
+      "alternatives": ["Docker Engine", "Podman", "Docker Desktop for Linux"]
+    },
+    {
+      "name": "Node.js",
+      "aliases": ["Node.js", "Node"],
+      "readiness": "green",
+      "category": "Development",
+      "reason": "Node.js ist unter Linux nativ verfügbar."
+    },
+    {
+      "name": "Python",
+      "aliases": ["Python", "Python Launcher"],
+      "readiness": "green",
+      "category": "Development",
+      "reason": "Python ist unter Linux nativ verfügbar."
+    },
+    {
+      "name": "Google Drive",
+      "aliases": ["Google Drive", "Google Drive for desktop"],
+      "readiness": "yellow",
+      "category": "Cloud Sync",
+      "reason": "Google Drive for desktop ist nicht als offizieller Linux-Client verfügbar. Zugriff ist über Browser, Dateimanager-Integration oder Drittanbieter möglich.",
+      "alternatives": ["Google Drive im Browser", "GNOME Online Accounts", "rclone", "Insync"]
+    },
+    {
+      "name": "Go",
+      "aliases": ["Go Programming Language", "Golang"],
+      "readiness": "green",
+      "category": "Development",
+      "reason": "Go ist unter Linux nativ verfügbar."
+    },
+    {
+      "name": "Raspberry Pi Imager",
+      "aliases": ["Raspberry Pi Imager"],
+      "readiness": "green",
+      "category": "Tools",
+      "reason": "Raspberry Pi Imager ist unter Linux verfügbar."
+    },
+    {
+      "name": "Tailscale",
+      "aliases": ["Tailscale"],
+      "readiness": "green",
+      "category": "Network",
+      "reason": "Tailscale ist unter Linux verfügbar."
+    },
+    {
+      "name": "WireGuard",
+      "aliases": ["WireGuard"],
+      "readiness": "green",
+      "category": "Network",
+      "reason": "WireGuard ist unter Linux nativ bzw. sehr gut integriert verfügbar."
+    },
+    {
+      "name": "OpenVPN",
+      "aliases": ["OpenVPN", "OpenVPN Connect"],
+      "readiness": "green",
+      "category": "Network",
+      "reason": "OpenVPN ist unter Linux verfügbar. Import und Verwaltung der Profile laufen je nach Distribution etwas anders."
+    },
+    {
+      "name": "Bitwarden",
+      "aliases": ["Bitwarden"],
+      "readiness": "green",
+      "category": "Security",
+      "reason": "Bitwarden ist unter Linux verfügbar."
+    },
+    {
+      "name": "KeePassXC",
+      "aliases": ["KeePassXC"],
+      "readiness": "green",
+      "category": "Security",
+      "reason": "KeePassXC ist unter Linux nativ verfügbar."
+    },
+    {
+      "name": "Microsoft OneDrive",
+      "aliases": ["Microsoft OneDrive", "OneDrive"],
+      "readiness": "yellow",
+      "category": "Cloud Sync",
+      "reason": "Es gibt keinen offiziellen vollwertigen OneDrive-Desktop-Client für Linux. Synchronisation ist über Drittanbieter-Clients oder Web-Nutzung möglich.",
+      "alternatives": ["OneDrive Web", "rclone", "Insync", "onedrive Client"]
+    },
+    {
+      "name": "Dropbox",
+      "aliases": ["Dropbox"],
+      "readiness": "green",
+      "category": "Cloud Sync",
+      "reason": "Dropbox bietet Linux-Unterstützung. Details wie Dateimanager-Integration sollten je nach Distribution geprüft werden."
+    },
+    {
+      "name": "Nextcloud",
+      "aliases": ["Nextcloud", "Nextcloud Desktop"],
+      "readiness": "green",
+      "category": "Cloud Sync",
+      "reason": "Nextcloud Desktop ist unter Linux nativ verfügbar."
+    },
+    {
+      "name": "TeamViewer",
+      "aliases": ["TeamViewer"],
+      "readiness": "green",
+      "category": "Remote Access",
+      "reason": "TeamViewer ist unter Linux verfügbar."
+    },
+    {
+      "name": "AnyDesk",
+      "aliases": ["AnyDesk"],
+      "readiness": "green",
+      "category": "Remote Access",
+      "reason": "AnyDesk ist unter Linux verfügbar."
+    },
+    {
+      "name": "Discord",
+      "aliases": ["Discord"],
+      "readiness": "green",
+      "category": "Communication",
+      "reason": "Discord ist unter Linux verfügbar. Bildschirm- und Audio-Sharing sollten je nach Desktop-Umgebung trotzdem kurz getestet werden."
+    },
+    {
+      "name": "Telegram Desktop",
+      "aliases": ["Telegram Desktop", "Telegram"],
+      "readiness": "green",
+      "category": "Communication",
+      "reason": "Telegram Desktop ist unter Linux nativ verfügbar."
+    },
+    {
+      "name": "WhatsApp",
+      "aliases": ["WhatsApp", "WhatsApp Desktop"],
+      "readiness": "yellow",
+      "category": "Communication",
+      "reason": "WhatsApp hat keinen gleichwertigen offiziellen nativen Linux-Desktop-Client. Nutzung über Web-App oder inoffizielle Wrapper ist möglich.",
+      "alternatives": ["WhatsApp Web", "Browser-Web-App"]
+    },
+    {
+      "name": "Zoom",
+      "aliases": ["Zoom", "Zoom Workplace"],
+      "readiness": "green",
+      "category": "Communication",
+      "reason": "Zoom ist unter Linux verfügbar. Kamera, Mikrofon und Screensharing sollten vor wichtigen Meetings getestet werden."
+    },
+    {
+      "name": "Spotify",
+      "aliases": ["Spotify"],
+      "readiness": "green",
+      "category": "Media",
+      "reason": "Spotify ist unter Linux verfügbar."
+    },
+    {
+      "name": "TeamSpeak",
+      "aliases": ["TeamSpeak", "TeamSpeak 3 Client"],
+      "readiness": "green",
+      "category": "Communication",
+      "reason": "TeamSpeak ist unter Linux verfügbar."
+    },
+    {
+      "name": "JDownloader",
+      "aliases": ["JDownloader", "JDownloader 2"],
+      "readiness": "green",
+      "category": "Downloads",
+      "reason": "JDownloader ist Java-basiert und kann unter Linux genutzt werden."
+    },
+    {
+      "name": "XAMPP",
+      "aliases": ["XAMPP"],
+      "readiness": "green",
+      "category": "Development",
+      "reason": "XAMPP ist für Linux verfügbar."
+    },
+    {
+      "name": "PuTTY",
+      "aliases": ["PuTTY"],
+      "readiness": "green",
+      "category": "Tools",
+      "reason": "SSH ist unter Linux direkt im Terminal verfügbar. PuTTY wird meist nicht mehr benötigt.",
+      "alternatives": ["OpenSSH", "Terminal"]
+    },
+    {
+      "name": "WinSCP",
+      "aliases": ["WinSCP"],
+      "readiness": "green",
+      "category": "Tools",
+      "reason": "SFTP/SCP-Workflows sind unter Linux mit Dateimanagern, Terminal und grafischen Clients gut ersetzbar.",
+      "alternatives": ["OpenSSH", "FileZilla", "GNOME Files", "Dolphin"]
+    },
+    {
+      "name": "Notepad++",
+      "aliases": ["Notepad++"],
+      "readiness": "green",
+      "category": "Tools",
+      "reason": "Die Funktionalität ist unter Linux gut durch native Editoren ersetzbar.",
+      "alternatives": ["Kate", "Gedit", "Visual Studio Code", "Geany"]
+    },
+    {
+      "name": "OpenSCAD",
+      "aliases": ["OpenSCAD"],
+      "readiness": "green",
+      "category": "CAD",
+      "reason": "OpenSCAD ist unter Linux nativ verfügbar."
+    },
+    {
+      "name": "Aseprite",
+      "aliases": ["Aseprite"],
+      "readiness": "green",
+      "category": "Creative",
+      "reason": "Aseprite ist für Linux verfügbar."
+    },
+    {
+      "name": "Factorio",
+      "aliases": ["Factorio"],
+      "readiness": "green",
+      "category": "Gaming",
+      "reason": "Factorio ist für Linux verfügbar."
+    },
+    {
+      "name": "Brotato",
+      "aliases": ["Brotato"],
+      "readiness": "green",
+      "category": "Gaming",
+      "reason": "Brotato läuft auf Linux-Systemen typischerweise gut. Spiele sollten später trotzdem separat geprüft werden."
+    },
+    {
+      "name": "Halls of Torment",
+      "aliases": ["Halls of Torment"],
+      "readiness": "green",
+      "category": "Gaming",
+      "reason": "Das Spiel ist für einen Linux-Umstieg eher unkritisch, sollte später aber über eine Spiele-Datenbank genauer geprüft werden."
+    },
+    {
+      "name": "Path of Exile 2",
+      "aliases": ["Path of Exile 2"],
+      "readiness": "yellow",
+      "category": "Gaming",
+      "reason": "Spiel-Kompatibilität sollte separat geprüft werden. Launcher, Anti-Cheat, Updates und Proton-Version können entscheidend sein.",
+      "alternatives": ["Steam", "ProtonDB", "Windows Dualboot"]
+    },
+    {
+      "name": "ARC Raiders",
+      "aliases": ["ARC Raiders"],
+      "readiness": "yellow",
+      "category": "Gaming",
+      "reason": "Online-Spiele mit Anti-Cheat sollten separat geprüft werden. Für solche Spiele ist eine pauschale Bewertung riskant.",
+      "alternatives": ["ProtonDB prüfen", "Windows Dualboot"]
+    },
+    {
+      "name": "World of Warcraft",
+      "aliases": ["World of Warcraft"],
+      "readiness": "yellow",
+      "category": "Gaming",
+      "reason": "World of Warcraft kann unter Linux oft über Wine/Lutris laufen, ist aber kein natives Linux-Spiel und hängt vom Battle.net-Setup ab.",
+      "alternatives": ["Lutris", "Bottles", "Windows Dualboot"]
+    },
+    {
+      "name": "Rockstar Games Launcher",
+      "aliases": ["Rockstar Games Launcher", "Rockstar Games Social Club"],
+      "readiness": "yellow",
+      "category": "Gaming",
+      "reason": "Kein nativer Linux-Client. Rockstar-Spiele können je nach Titel, Launcher und Anti-Cheat problematisch sein.",
+      "alternatives": ["Steam/Proton", "Lutris", "Windows Dualboot"]
+    },
+    {
+      "name": "Razer Synapse",
+      "aliases": ["Razer Synapse"],
+      "readiness": "red",
+      "category": "Hardware",
+      "reason": "Razer Synapse hat keinen gleichwertigen offiziellen Linux-Workflow. Grundfunktionen der Hardware können laufen, Spezialfunktionen sind problematisch.",
+      "alternatives": ["OpenRazer", "Polychromatic", "Windows Dualboot"]
+    },
+    {
+      "name": "Logitech G HUB",
+      "aliases": ["Logitech G HUB", "LGHUB"],
+      "readiness": "yellow",
+      "category": "Hardware",
+      "reason": "Logitech G HUB hat keinen offiziellen Linux-Workflow. Viele Geräte funktionieren grundlegend, Makros, Profile und Beleuchtung brauchen ggf. Community-Tools.",
+      "alternatives": ["Piper", "libratbag", "Solaar", "Windows Dualboot"]
+    },
+    {
+      "name": "Corsair iCUE",
+      "aliases": ["Corsair iCUE", "iCUE"],
+      "readiness": "yellow",
+      "category": "Hardware",
+      "reason": "Corsair iCUE ist Windows-orientiert. Grundfunktionen der Hardware können laufen, RGB-, Profil- und Makro-Workflows sind unter Linux eingeschränkt.",
+      "alternatives": ["OpenRGB", "ckb-next", "Windows Dualboot"]
+    },
+    {
+      "name": "iCloud Outlook",
+      "aliases": ["iCloud Outlook"],
+      "readiness": "red",
+      "category": "Productivity",
+      "reason": "Die iCloud-Outlook-Integration ist stark an Windows/Outlook gekoppelt und unter Linux kein direkter Standard-Workflow.",
+      "alternatives": ["iCloud Web", "Thunderbird", "Nextcloud", "Windows Dualboot"]
+    },
+    {
+      "name": "Adobe Acrobat",
+      "aliases": ["Adobe Acrobat"],
+      "readiness": "yellow",
+      "category": "PDF",
+      "reason": "Adobe Acrobat gibt es nicht als vollwertige moderne native Linux-Version. Normale PDF-Nutzung ist aber mit Alternativen möglich.",
+      "alternatives": ["Okular", "Evince", "Master PDF Editor", "PDF Arranger"]
+    },
+    {
+      "name": "Adobe Creative Cloud",
+      "aliases": ["Adobe Creative Cloud"],
+      "readiness": "red",
+      "category": "Creative",
+      "reason": "Adobe Creative Cloud ist unter Linux nicht als nativer Desktop-Workflow verfügbar.",
+      "alternatives": ["Windows Dualboot", "Web-Tools", "Linux-native Kreativprogramme"]
+    },
+    {
+      "name": "Adobe Media Encoder",
+      "aliases": ["Adobe Media Encoder"],
+      "readiness": "red",
+      "category": "Video",
+      "reason": "Adobe Media Encoder hat keine native Linux-Version und ist Teil des Adobe-Workflows.",
+      "alternatives": ["DaVinci Resolve", "HandBrake", "FFmpeg", "Windows Dualboot"]
+    },
+    {
+      "name": "MSI Afterburner",
+      "aliases": ["MSI Afterburner", "RivaTuner Statistics Server"],
+      "readiness": "yellow",
+      "category": "Monitoring",
+      "reason": "MSI Afterburner und RTSS sind Windows-orientiert. Monitoring ist unter Linux möglich, aber der Workflow ist anders.",
+      "alternatives": ["MangoHud", "LACT", "CoreCtrl", "GreenWithEnvy"]
+    },
+    {
+      "name": "HWiNFO",
+      "aliases": ["HWiNFO", "HWiNFO64"],
+      "readiness": "yellow",
+      "category": "Monitoring",
+      "reason": "HWiNFO ist Windows-orientiert. Unter Linux gibt es andere Monitoring-Werkzeuge.",
+      "alternatives": ["Mission Center", "btop", "lm-sensors", "Psensor"]
+    },
+    {
+      "name": "CrystalDiskInfo",
+      "aliases": ["CrystalDiskInfo"],
+      "readiness": "green",
+      "category": "Storage",
+      "reason": "Die Funktionalität ist unter Linux über SMART-Tools und grafische Alternativen gut ersetzbar.",
+      "alternatives": ["smartmontools", "GNOME Disks", "KDE Partition Manager"]
+    },
+    {
+      "name": "Zen Browser",
+      "aliases": ["Zen Browser"],
+      "readiness": "green",
+      "category": "Browser",
+      "reason": "Zen Browser ist Firefox-basiert und für Linux-Desktop-Setups grundsätzlich unkritisch."
+    },
+    {
+      "name": "Surfshark",
+      "aliases": ["Surfshark"],
+      "readiness": "green",
+      "category": "Network",
+      "reason": "Surfshark kann unter Linux genutzt werden. VPN-Verbindungen sollten nach der Installation kurz getestet werden."
+    },
+    {
+      "name": "Windows Subsystem for Linux",
+      "aliases": ["Windows Subsystem for Linux", "WSL"],
+      "readiness": "green",
+      "category": "Development",
+      "reason": "WSL zeigt bereits Linux-nahe Nutzung. Auf einem echten Linux-System wird WSL selbst nicht mehr benötigt."
+    },
+    {
+      "name": "Chocolatey",
+      "aliases": ["Chocolatey", "Chocolatey (Install Only)"],
+      "readiness": "green",
+      "category": "Development",
+      "reason": "Chocolatey ist Windows-spezifisch. Paketverwaltung ist unter Linux nativ über die Distribution verfügbar.",
+      "alternatives": ["apt", "dnf", "pacman", "Flatpak"]
+    },
+    {
+      "name": "PowerToys",
+      "aliases": ["PowerToys", "PowerToys (Preview)", "PowerToys (Preview) x64"],
+      "readiness": "yellow",
+      "category": "Productivity",
+      "reason": "Microsoft PowerToys ist Windows-spezifisch. Viele Funktionen sind unter Linux durch Desktop-Erweiterungen oder Bordmittel ersetzbar, aber nicht eins zu eins.",
+      "alternatives": ["KDE-Einstellungen", "GNOME Extensions", "Albert", "KRunner"]
+    },
+    {
+      "name": "TickTick",
+      "aliases": ["TickTick"],
+      "readiness": "green",
+      "category": "Productivity",
+      "reason": "TickTick kann unter Linux über Web-App und je nach Setup auch als Desktop-App genutzt werden."
+    },
+    {
+      "name": "Lightshot",
+      "aliases": ["Lightshot"],
+      "readiness": "yellow",
+      "category": "Tools",
+      "reason": "Lightshot ist Windows-orientiert. Screenshots und Markierungen sind unter Linux gut möglich, aber mit anderem Werkzeug.",
+      "alternatives": ["Spectacle", "GNOME Screenshot", "Flameshot", "Ksnip"]
+    },
+    {
+      "name": "Ultimaker Cura",
+      "aliases": ["Ultimaker Cura", "UltiMaker Cura"],
+      "readiness": "green",
+      "category": "3D Printing",
+      "reason": "UltiMaker Cura ist unter Linux verfügbar."
+    },
+    {
+      "name": "Astropad Studio",
+      "aliases": ["Astropad Studio"],
+      "readiness": "red",
+      "category": "Creative",
+      "reason": "Astropad Studio ist stark auf Windows/macOS-Workflows ausgelegt. Ein gleichwertiger nativer Linux-Workflow ist für iPad-Zeichen-Setups nicht garantiert.",
+      "alternatives": ["Krita mit Grafiktablet", "Weylus prüfen", "Windows Dualboot"]
+    },
+    {
+      "name": "Garmin Express",
+      "aliases": ["Garmin Express"],
+      "readiness": "yellow",
+      "category": "Devices",
+      "reason": "Garmin Express hat keinen klassischen nativen Linux-Desktop-Workflow. Geräte-Sync sollte je nach Garmin-Modell separat geprüft werden.",
+      "alternatives": ["Garmin Connect im Browser", "Android/iOS-App", "Windows Dualboot"]
+    },
+    {
+      "name": "Synology Active Backup for Business Agent",
+      "aliases": ["Synology Active Backup for Business Agent"],
+      "readiness": "yellow",
+      "category": "Backup",
+      "reason": "Der konkrete Backup-Agent ist systemnah. Vor dem Wechsel sollte geprüft werden, ob das geplante Synology-Backup-Ziel Linux-Clients in deinem Szenario abdeckt.",
+      "alternatives": ["Synology Drive Client", "rsync", "BorgBackup", "Timeshift"]
+    },
+    {
+      "name": "Wazuh Agent",
+      "aliases": ["Wazuh Agent"],
+      "readiness": "green",
+      "category": "Security",
+      "reason": "Wazuh Agent ist für Linux-Hosts verfügbar."
+    },
+    {
+      "name": "AMD Software",
+      "aliases": ["AMD Software"],
+      "readiness": "yellow",
+      "category": "Hardware",
+      "reason": "AMD-Grafik funktioniert unter Linux meist gut, die Windows-Software selbst gibt es dort aber nicht als identischen Workflow.",
+      "alternatives": ["Mesa", "CoreCtrl", "LACT", "Distributionstreiber"]
+    },
+    {
+      "name": "AMD Chipset Software",
+      "aliases": ["AMD Chipset Software"],
+      "readiness": "green",
+      "category": "Hardware",
+      "reason": "AMD-Chipsatztreiber werden unter Linux normalerweise über Kernel und Distribution bereitgestellt."
+    },
+    {
+      "name": "AMD Ryzen Master",
+      "aliases": ["AMD Ryzen Master", "AMD Ryzen Master SDK"],
+      "readiness": "yellow",
+      "category": "Hardware",
+      "reason": "AMD Ryzen Master ist Windows-orientiert. Monitoring und Tuning sind unter Linux möglich, aber mit anderen Werkzeugen und vorsichtigerem Workflow.",
+      "alternatives": ["BIOS/UEFI", "CoreCtrl", "RyzenAdj", "lm-sensors"]
+    },
+    {
+      "name": "NVIDIA Grafiktreiber",
+      "aliases": ["NVIDIA Grafiktreiber", "NVIDIA Graphics Driver"],
+      "readiness": "yellow",
+      "category": "Hardware",
+      "reason": "NVIDIA-Grafik ist unter Linux nutzbar, braucht aber je nach Distribution, Treiber, Wayland und Standby-Verhalten Aufmerksamkeit.",
+      "alternatives": ["Distributionstreiber", "NVIDIA proprietärer Treiber"]
+    },
+    {
+      "name": "WD_BLACK AN1500",
+      "aliases": ["WD_BLACK AN1500"],
+      "readiness": "yellow",
+      "category": "Storage",
+      "reason": "Das Laufwerk selbst ist als Speicher voraussichtlich unkritisch. Hersteller-Tools, Firmware- und RGB-Funktionen sollten separat geprüft werden.",
+      "alternatives": ["smartmontools", "GNOME Disks", "Firmware-Updates vor Migration prüfen"]
+    },
+    {
+      "name": "TP-Link Bluetooth Adapter",
+      "aliases": ["TP-Link Bluetooth Adapter"],
+      "readiness": "yellow",
+      "category": "Hardware",
+      "reason": "Bluetooth-Adapter können unter Linux gut funktionieren, hängen aber stark vom verbauten Chipsatz und Kernel-Support ab.",
+      "alternatives": ["Live-System-Test", "Kernel-Kompatibilität prüfen"]
+    },
+    {
+      "name": "CPU-Z",
+      "aliases": ["CPU-Z", "CPUID ROG CPU-Z"],
+      "readiness": "green",
+      "category": "Monitoring",
+      "reason": "CPU-Z ist Windows-orientiert, die Funktionalität ist unter Linux gut ersetzbar.",
+      "alternatives": ["CPU-X", "HardInfo", "lscpu", "Mission Center"]
+    },
+    {
+      "name": "AIDA64",
+      "aliases": ["AIDA64", "AIDA64 Extreme"],
+      "readiness": "yellow",
+      "category": "Monitoring",
+      "reason": "AIDA64 ist Windows-orientiert. Systeminformationen und Sensoren sind unter Linux möglich, aber mit anderen Werkzeugen.",
+      "alternatives": ["HardInfo", "Mission Center", "btop", "lm-sensors"]
+    },
+    {
+      "name": "CapFrameX",
+      "aliases": ["CapFrameX", "CapFrameX Capture and Analysis Tool"],
+      "readiness": "yellow",
+      "category": "Monitoring",
+      "reason": "CapFrameX ist Windows-orientiert. Frame-Time- und Overlay-Workflows brauchen unter Linux andere Werkzeuge.",
+      "alternatives": ["MangoHud", "GOverlay", "PresentMon-Alternativen prüfen"]
+    },
+    {
+      "name": "3DMark",
+      "aliases": ["3DMark", "Futuremark SystemInfo"],
+      "readiness": "yellow",
+      "category": "Benchmark",
+      "reason": "3DMark ist für Linux-Desktop-Workflows nur eingeschränkt relevant. Benchmarking ist möglich, aber meist mit anderen Tests.",
+      "alternatives": ["Unigine Superposition", "vkmark", "Phoronix Test Suite"]
+    },
+    {
+      "name": "ASUS Aura",
+      "aliases": ["ASUS Aura SDK", "ASUS AURA VGA Component", "AURA Service", "AURA DRAM Component", "AURA lighting effect add-on", "AURA lighting effect add-on x64", "Kingston AURA DRAM Component"],
+      "readiness": "yellow",
+      "category": "Hardware",
+      "reason": "ASUS-Aura/RGB-Komponenten sind Windows-orientiert. RGB-Steuerung kann unter Linux funktionieren, ist aber hardwareabhängig.",
+      "alternatives": ["OpenRGB", "BIOS/UEFI", "Windows Dualboot"]
+    },
+    {
+      "name": "ASUS Update Helper",
+      "aliases": ["ASUS Update Helper", "ROG Live Service"],
+      "readiness": "yellow",
+      "category": "Hardware",
+      "reason": "ASUS-Herstellerdienste sind Windows-orientiert. Firmware- und Mainboard-Updates sollten vor dem Wechsel oder über UEFI/Herstellerwege geplant werden.",
+      "alternatives": ["BIOS/UEFI", "Hersteller-Webseite", "Windows Dualboot"]
+    },
+    {
+      "name": "MSI Center",
+      "aliases": ["MSI Center SDK", "MSI Development Tools", "MSIRegister"],
+      "readiness": "yellow",
+      "category": "Hardware",
+      "reason": "MSI Center und zugehörige Herstellerkomponenten sind Windows-orientiert. Monitoring, Lüfter- und RGB-Themen brauchen unter Linux andere Wege.",
+      "alternatives": ["OpenRGB", "lm-sensors", "BIOS/UEFI", "Windows Dualboot"]
+    },
+    {
+      "name": "Patriot Viper RGB",
+      "aliases": ["Patriot Viper DRAM RGB", "Patriot Viper M2 SSD RGB", "Universal Holtek RGB DRAM"],
+      "readiness": "yellow",
+      "category": "Hardware",
+      "reason": "RGB-Steuerung für RAM/SSD ist unter Linux hardwareabhängig und oft nicht so komfortabel wie unter Windows.",
+      "alternatives": ["OpenRGB", "BIOS/UEFI", "Windows Dualboot"]
+    },
+    {
+      "name": "Hue Sync",
+      "aliases": ["Hue Sync"],
+      "readiness": "yellow",
+      "category": "Hardware",
+      "reason": "Hue Sync ist als Desktop-Sync-Workflow unter Linux nicht immer gleichwertig verfügbar. Hue-Steuerung selbst ist über Apps und Integrationen möglich.",
+      "alternatives": ["Hue App", "Home Assistant", "OpenRGB prüfen"]
+    },
+    {
+      "name": "Elgato Camera Hub",
+      "aliases": ["Elgato Camera Hub"],
+      "readiness": "yellow",
+      "category": "Hardware",
+      "reason": "Elgato Camera Hub ist Windows/macOS-orientiert. Kamera-Grundfunktionen können laufen, Einstellungen und Spezialfunktionen müssen separat getestet werden.",
+      "alternatives": ["OBS", "v4l2-Tools", "Windows Dualboot"]
+    },
+    {
+      "name": "Elgato Audio Effects",
+      "aliases": ["Elgato Audio Effects"],
+      "readiness": "red",
+      "category": "Audio",
+      "reason": "Elgato Audio Effects gehört zum Elgato-Audio-Workflow und ist unter Linux nicht als gleichwertiger offizieller Workflow zu erwarten.",
+      "alternatives": ["PipeWire", "EasyEffects", "OBS Audio-Mixer", "Windows Dualboot"]
+    },
+    {
+      "name": "StreamElements SE.Live",
+      "aliases": ["StreamElements SE.Live", "SE.Live"],
+      "readiness": "yellow",
+      "category": "Streaming",
+      "reason": "SE.Live ist stark an OBS- und Plugin-Workflows gebunden. OBS selbst läuft unter Linux, einzelne StreamElements-Funktionen sollten getestet werden.",
+      "alternatives": ["OBS Studio", "Browser-Docks", "StreamElements im Browser"]
+    },
+    {
+      "name": "Blackmagic RAW",
+      "aliases": ["Blackmagic RAW Common Components"],
+      "readiness": "green",
+      "category": "Video",
+      "reason": "Blackmagic-RAW-Komponenten sind im DaVinci-Resolve-Workflow unter Linux grundsätzlich plausibel, sollten aber mit dem konkreten Codec-Workflow getestet werden."
+    },
+    {
+      "name": "Fairlight Audio Accelerator Utility",
+      "aliases": ["Fairlight Audio Accelerator Utility"],
+      "readiness": "yellow",
+      "category": "Audio",
+      "reason": "Fairlight-Hardware und DaVinci-Resolve-Audio-Workflows sollten unter Linux mit der konkreten Hardware getestet werden."
+    },
+    {
+      "name": "Bonjour",
+      "aliases": ["Bonjour"],
+      "readiness": "green",
+      "category": "Network",
+      "reason": "Bonjour/mDNS-Funktionalität ist unter Linux typischerweise über Avahi verfügbar.",
+      "alternatives": ["Avahi"]
+    },
+    {
+      "name": "OpenAL",
+      "aliases": ["OpenAL"],
+      "readiness": "green",
+      "category": "Audio",
+      "reason": "OpenAL bzw. OpenAL-Soft ist unter Linux verfügbar."
+    },
+    {
+      "name": "Microsoft GameInput",
+      "aliases": ["Microsoft GameInput"],
+      "readiness": "green",
+      "category": "Gaming",
+      "reason": "Microsoft GameInput ist eine Windows-Komponente. Auf Linux wird sie normalerweise nicht als separates Nutzerprogramm benötigt."
+    },
+    {
+      "name": "Epic Online Services",
+      "aliases": ["Epic Online Services"],
+      "readiness": "yellow",
+      "category": "Gaming",
+      "reason": "Epic Online Services ist eine Spiele-/Launcher-Komponente. Linux-Kompatibilität hängt vom jeweiligen Spiel und dessen Online-Funktionen ab.",
+      "alternatives": ["ProtonDB prüfen", "Windows Dualboot"]
+    },
+    {
+      "name": "Paradox Launcher",
+      "aliases": ["Paradox Launcher", "Paradox Launcher v2"],
+      "readiness": "yellow",
+      "category": "Gaming",
+      "reason": "Paradox-Spiele können unter Linux teils nativ oder über Proton laufen. Der Launcher sollte pro Spiel getestet werden.",
+      "alternatives": ["Steam", "ProtonDB prüfen", "Windows Dualboot"]
+    },
+    {
+      "name": "RSI Launcher",
+      "aliases": ["RSI Launcher"],
+      "readiness": "red",
+      "category": "Gaming",
+      "reason": "Der RSI Launcher bzw. Star-Citizen-Workflow ist unter Linux ein hohes Risiko und sollte vor einem Wechsel gezielt getestet werden.",
+      "alternatives": ["Lutris prüfen", "Windows Dualboot"]
+    },
+    {
+      "name": "Overwolf",
+      "aliases": ["Overwolf"],
+      "readiness": "red",
+      "category": "Gaming",
+      "reason": "Overwolf ist stark Windows-orientiert. Addon- und Overlay-Workflows können unter Linux ein Blocker sein.",
+      "alternatives": ["Manuelle Addon-Installation", "Web-Tools", "Windows Dualboot"]
+    },
+    {
+      "name": "RaiderIO",
+      "aliases": ["RaiderIO"],
+      "readiness": "yellow",
+      "category": "Gaming",
+      "reason": "RaiderIO ist ein WoW-Addon-Workflow. Die Addons selbst können meist manuell genutzt werden, der Desktop-Client sollte separat geprüft werden.",
+      "alternatives": ["Manuelle Addon-Installation", "CurseForge/Alternativen prüfen"]
+    },
+    {
+      "name": "TradeSkillMaster",
+      "aliases": ["TradeSkillMaster", "TradeSkillMaster Application"],
+      "readiness": "yellow",
+      "category": "Gaming",
+      "reason": "TradeSkillMaster ist ein WoW-Addon-Workflow. Addon und Desktop-App sollten unter Linux separat geprüft werden.",
+      "alternatives": ["Manuelle Addon-Installation", "Windows Dualboot"]
+    },
+    {
+      "name": "RAGE Multiplayer",
+      "aliases": ["RAGE Multiplayer", "alt:V Multiplayer"],
+      "readiness": "yellow",
+      "category": "Gaming",
+      "reason": "GTA-Multiplayer-Clients sind unter Linux stark vom jeweiligen Client, Anti-Cheat und GTA-Setup abhängig.",
+      "alternatives": ["ProtonDB prüfen", "Lutris prüfen", "Windows Dualboot"]
+    },
+    {
+      "name": "The Elder Scrolls Online",
+      "aliases": ["The Elder Scrolls Online"],
+      "readiness": "yellow",
+      "category": "Gaming",
+      "reason": "Spiel-Kompatibilität sollte separat geprüft werden. Launcher, Updates und Proton-Version können entscheidend sein.",
+      "alternatives": ["Steam", "ProtonDB prüfen", "Windows Dualboot"]
+    },
+    {
+      "name": "Assassin's Creed Shadows",
+      "aliases": ["Assassin's Creed Shadows"],
+      "readiness": "yellow",
+      "category": "Gaming",
+      "reason": "Spiel-Kompatibilität sollte separat geprüft werden. Ubisoft-Launcher, Updates und Proton-Version können entscheidend sein.",
+      "alternatives": ["ProtonDB prüfen", "Ubisoft Connect über Lutris/Proton", "Windows Dualboot"]
+    },
+    {
+      "name": "Steam-Spiel mit Einzelprüfung",
+      "aliases": ["Captain of Industry", "Backpack Battles", "Revolution Idle", "Megabonk", "Foundation", "FOUNDRY", "Mechabellum"],
+      "readiness": "yellow",
+      "category": "Gaming",
+      "reason": "Dieses Spiel sollte einzeln über Steam/ProtonDB geprüft werden. Spielebewertungen können sich durch Updates, Launcher und Proton-Versionen ändern.",
+      "alternatives": ["Steam", "ProtonDB prüfen", "Windows Dualboot"]
+    },
+    {
+      "name": "Windows SDK",
+      "aliases": ["Windows Software Development Kit", "Application Verifier", "Kits Configuration Installer", "WinAppDeploy", "Universal General MIDI DLS Extension SDK", "vcpp_crt.redist.clickonce", "vs_FileTracker_Singleton", "Elevated Installer"],
+      "readiness": "yellow",
+      "category": "Development",
+      "reason": "Diese Windows-SDK- oder Runtime-Komponente ist meist kein eigenes Nutzerprogramm. Relevant ist vor allem, ob dein Entwicklungsworkflow Windows-spezifische Ziele braucht.",
+      "alternatives": ["Linux SDKs", "Container", "Windows VM", "Windows Dualboot"]
+    },
+    {
+      "name": "Adobe Helper Components",
+      "aliases": ["Adobe Refresh Manager", "UXP WebView Support"],
+      "readiness": "red",
+      "category": "Creative",
+      "reason": "Adobe-Hilfskomponenten gehören zum Windows/macOS-orientierten Adobe-Desktop-Workflow und sind unter Linux kein gleichwertiger nativer Workflow.",
+      "alternatives": ["Windows Dualboot", "Web-Tools", "Linux-native Kreativprogramme"]
+    },
+    {
+      "name": "iMazing Converter",
+      "aliases": ["iMazing Converter"],
+      "readiness": "yellow",
+      "category": "Media",
+      "reason": "iMazing Converter ist Windows/macOS-orientiert. HEIC/HEVC- und Apple-Medienkonvertierung ist unter Linux möglich, aber mit anderem Werkzeug.",
+      "alternatives": ["ImageMagick", "Converseen", "ffmpeg", "digiKam"]
+    },
+    {
+      "name": "JetBrains ETW Host Service",
+      "aliases": ["JetBrains ETW Host Service"],
+      "readiness": "green",
+      "category": "Development",
+      "reason": "Der JetBrains-ETW-Dienst ist eine Windows-spezifische Hilfskomponente. JetBrains-IDEs selbst sind unter Linux verfügbar."
+    },
+    {
+      "name": "Microsoft Update Health Tools",
+      "aliases": ["Microsoft Update Health Tools"],
+      "readiness": "green",
+      "category": "System",
+      "reason": "Microsoft Update Health Tools ist eine Windows-Wartungskomponente und auf einem Linux-System nicht als eigenes Nutzerprogramm relevant."
+    },
+    {
+      "name": "GameSDK Service",
+      "aliases": ["GameSDK Service"],
+      "readiness": "yellow",
+      "category": "Gaming",
+      "reason": "GameSDK Service wirkt wie eine spiel- oder launcherbezogene Hintergrundkomponente. Entscheidend ist die Kompatibilität des zugehörigen Spiels.",
+      "alternatives": ["ProtonDB prüfen", "Windows Dualboot"]
+    },
+    {
+      "name": "OEM Application Profile",
+      "aliases": ["OEM Application Profile"],
+      "readiness": "green",
+      "category": "System",
+      "reason": "OEM Application Profile ist wahrscheinlich eine Windows-/Hersteller-Hilfskomponente und kein eigener Linux-Workflow."
+    },
+    {
+      "name": "GF Gear Generator",
+      "aliases": ["GF Gear Generator"],
+      "readiness": "yellow",
+      "category": "Gaming",
+      "reason": "GF Gear Generator sollte als spezialisiertes Gaming- oder Tool-Programm einzeln geprüft werden. Wenn es nur ein Hilfstool ist, kann ein Web- oder Alternativworkflow reichen.",
+      "alternatives": ["Web-Tool prüfen", "Windows Dualboot"]
+    },
+    {
+      "name": "Vertical Canvas",
+      "aliases": ["Vertical Canvas"],
+      "readiness": "yellow",
+      "category": "Creative",
+      "reason": "Vertical Canvas ist nicht als klarer nativer Linux-Standardworkflow bekannt. Vor einem Wechsel sollte geprüft werden, ob Projektdateien und Exportwege ersetzbar sind.",
+      "alternatives": ["Web-App prüfen", "Linux-native Kreativprogramme", "Windows Dualboot"]
+    },
+    {
+      "name": "Source Record",
+      "aliases": ["Source Record"],
+      "readiness": "yellow",
+      "category": "Tools",
+      "reason": "Source Record sollte als spezialisiertes Tool einzeln geprüft werden. Entscheidend ist, ob es für deinen Workflow zwingend gebraucht wird.",
+      "alternatives": ["OBS Studio", "ffmpeg", "Windows Dualboot"]
+    },
+    {
+      "name": "TreeSize",
+      "aliases": ["TreeSize", "TreeSize Free"],
+      "readiness": "green",
+      "category": "Tools",
+      "reason": "Die Funktionalität ist unter Linux gut ersetzbar.",
+      "alternatives": ["Baobab", "Filelight", "ncdu"]
+    }
+  ]
+}
