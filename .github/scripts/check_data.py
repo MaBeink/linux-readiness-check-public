@@ -113,14 +113,23 @@ def check_rules(path: Path) -> tuple[list[str], set[str]]:
                 errors.append(f"{where}: {field} fehlt, ist zu lang oder enthält Steuerzeichen")
             elif DRAFT_MARKER in value:
                 errors.append(f"{where}: {field} enthält noch TODO, der Entwurf ist nicht fertig")
-        alternatives = rule.get("alternatives", [])
-        if (
-            not isinstance(alternatives, list)
-            or len(alternatives) > MAX_RULE_ALTERNATIVES
-            or not all(is_clean_text(item, MAX_RULE_ALTERNATIVE_CHARS) for item in alternatives)
-        ):
-            errors.append(f"{where}: alternatives sind zu viele, zu lang oder kein Text")
-        unknown = set(rule) - {"name", "aliases", "readiness", "category", "reason", "alternatives"}
+        if "reason_en" in rule:
+            value = rule["reason_en"]
+            if not is_clean_text(value, MAX_RULE_REASON_CHARS) or not value.strip():
+                errors.append(f"{where}: reason_en ist leer, zu lang oder enthält Steuerzeichen")
+            elif DRAFT_MARKER in value:
+                errors.append(f"{where}: reason_en enthält noch TODO, der Entwurf ist nicht fertig")
+        for field in ("alternatives", "alternatives_en"):
+            alternatives = rule.get(field, [])
+            if (
+                not isinstance(alternatives, list)
+                or len(alternatives) > MAX_RULE_ALTERNATIVES
+                or not all(is_clean_text(item, MAX_RULE_ALTERNATIVE_CHARS) for item in alternatives)
+            ):
+                errors.append(f"{where}: {field} sind zu viele, zu lang oder kein Text")
+        unknown = set(rule) - {
+            "name", "aliases", "readiness", "category", "reason", "alternatives", "reason_en", "alternatives_en",
+        }
         if unknown:
             errors.append(f"{where}: unbekannte Felder {sorted(unknown)} (Tippfehler?)")
     return errors, names
@@ -152,10 +161,14 @@ def check_pending(path: Path, rule_names: set[str]) -> list[str]:
         if key in rule_names:
             errors.append(f"{where}: „{name}“ steht schon in rules.json, bitte aus pending.json entfernen")
         seen.add(key)
-        for field, max_chars in (("category", MAX_PENDING_NAME_CHARS), ("description", MAX_PENDING_DESCRIPTION_CHARS)):
+        for field, max_chars in (
+            ("category", MAX_PENDING_NAME_CHARS),
+            ("description", MAX_PENDING_DESCRIPTION_CHARS),
+            ("description_en", MAX_PENDING_DESCRIPTION_CHARS),
+        ):
             if field in program and not is_clean_text(program[field], max_chars):
                 errors.append(f"{where}: {field} ist zu lang oder enthält Steuerzeichen")
-        unknown = set(program) - {"name", "category", "description"}
+        unknown = set(program) - {"name", "category", "description", "description_en"}
         if unknown:
             errors.append(f"{where}: unbekannte Felder {sorted(unknown)} (Tippfehler?)")
     return errors
