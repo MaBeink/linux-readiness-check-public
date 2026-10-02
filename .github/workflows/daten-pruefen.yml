@@ -1,0 +1,22 @@
+name: Daten prüfen
+
+# Checks rules.json and pending.json on every change. A red check means the
+# change must not go online; see .github/scripts/check_data.py for the rules.
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  check:
+    name: rules.json und pending.json prüfen
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Check data files
+        run: python3 .github/scripts/check_data.py rules.json pending.json
