@@ -1,4 +1,47 @@
 {
   "schema_version": 1,
-  "programs": []
+  "programs": [
+    {
+      "name": "Acronis True Image",
+      "category": "Backup",
+      "description": "Sicherung ganzer Festplatten und Systeme.",
+      "description_en": "Backup of whole drives and systems."
+    },
+    {
+      "name": "Adobe AIR",
+      "category": "System",
+      "description": "Laufzeitumgebung für ältere Desktop-Apps.",
+      "description_en": "Runtime for older desktop apps."
+    },
+    {
+      "name": "Adobe Bridge",
+      "category": "Creative",
+      "description": "Verwaltung von Fotos und Adobe-Dateien.",
+      "description_en": "Managing photos and Adobe files."
+    },
+    {
+      "name": "Apple Mobile Device Support",
+      "category": "Devices",
+      "description": "Verbindung zu iPhone und iPad, zum Beispiel für Sicherungen.",
+      "description_en": "Connection to iPhone and iPad, for example for backups."
+    },
+    {
+      "name": "AviSynth",
+      "category": "Video",
+      "description": "Skriptbasierte Videobearbeitung.",
+      "description_en": "Script-based video editing."
+    },
+    {
+      "name": "ASUS Power4Gear",
+      "category": "Hardware",
+      "description": "Energieprofile für ASUS-Laptops.",
+      "description_en": "Power profiles for ASUS laptops."
+    },
+    {
+      "name": "abgx360",
+      "category": "Gaming",
+      "description": "Prüft Abbilder von Xbox-360-Spielen.",
+      "description_en": "Checks Xbox 360 game images."
+    }
+  ]
 }
