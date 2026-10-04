@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "rules_version": "2026-10-02.1",
+  "rules_version": "2026-10-04.1",
   "rules": [
     {
       "name": "Firefox",
@@ -1106,16 +1106,6 @@
       "alternatives_en": ["Steam", "check ProtonDB", "Windows dual boot"]
     },
     {
-      "name": "Windows SDK",
-      "aliases": ["Windows Software Development Kit", "Application Verifier", "Kits Configuration Installer", "WinAppDeploy", "Universal General MIDI DLS Extension SDK", "vcpp_crt.redist.clickonce", "vs_FileTracker_Singleton", "Elevated Installer"],
-      "readiness": "yellow",
-      "category": "Development",
-      "reason": "Diese Windows-SDK- oder Runtime-Komponente ist meist kein eigenes Nutzerprogramm. Relevant ist vor allem, ob dein Entwicklungsworkflow Windows-spezifische Ziele braucht.",
-      "reason_en": "This Windows SDK or runtime component is usually not a program of its own. What matters is whether your development workflow needs Windows-specific targets.",
-      "alternatives": ["Linux SDKs", "Container", "Windows VM", "Windows Dualboot"],
-      "alternatives_en": ["Linux SDKs", "Container", "Windows VM", "Windows dual boot"]
-    },
-    {
       "name": "Adobe Helper Components",
       "aliases": ["Adobe Refresh Manager", "UXP WebView Support"],
       "readiness": "red",
@@ -1206,6 +1196,177 @@
       "reason": "Die Funktionalität ist unter Linux gut ersetzbar.",
       "reason_en": "Its features are easy to replace on Linux.",
       "alternatives": ["Baobab", "Filelight", "ncdu"]
+    },
+    {
+      "name": "Android Studio",
+      "aliases": [],
+      "readiness": "green",
+      "category": "Development",
+      "reason": "Android Studio gibt es offiziell für Linux.",
+      "reason_en": "Android Studio is officially available for Linux."
+    },
+    {
+      "name": "Arduino IDE",
+      "aliases": [],
+      "readiness": "green",
+      "category": "Development",
+      "reason": "Die Arduino IDE gibt es offiziell für Linux. Für den Zugriff auf Boards muss der Benutzer eventuell in die Gruppe für serielle Geräte (dialout oder uucp).",
+      "reason_en": "The Arduino IDE is officially available for Linux. To access boards, your user may need to be in the group for serial devices (dialout or uucp)."
+    },
+    {
+      "name": "balenaEtcher",
+      "aliases": ["Etcher"],
+      "readiness": "green",
+      "category": "Tools",
+      "reason": "balenaEtcher gibt es für Linux.",
+      "reason_en": "balenaEtcher is available for Linux."
+    },
+    {
+      "name": "Bambu Studio",
+      "aliases": [],
+      "readiness": "green",
+      "category": "3D Printing",
+      "reason": "Bambu Studio gibt es offiziell für Linux, zum Beispiel als AppImage oder Flatpak.",
+      "reason_en": "Bambu Studio is officially available for Linux, for example as an AppImage or Flatpak."
+    },
+    {
+      "name": "FFmpeg",
+      "aliases": [],
+      "readiness": "green",
+      "category": "Media",
+      "reason": "FFmpeg ist unter Linux nativ verfügbar und meist schon über die Distribution installierbar.",
+      "reason_en": "FFmpeg is available natively on Linux and can usually be installed from the distribution."
+    },
+    {
+      "name": "FileZilla",
+      "aliases": [],
+      "readiness": "green",
+      "category": "Network",
+      "reason": "FileZilla ist unter Linux nativ verfügbar.",
+      "reason_en": "FileZilla is available natively on Linux."
+    },
+    {
+      "name": "Obsidian",
+      "aliases": [],
+      "readiness": "green",
+      "category": "Productivity",
+      "reason": "Obsidian gibt es offiziell für Linux. Die Notizen sind normale Dateien und lassen sich direkt mitnehmen.",
+      "reason_en": "Obsidian is officially available for Linux. Notes are plain files and can be taken along directly."
+    },
+    {
+      "name": "Postman",
+      "aliases": [],
+      "readiness": "green",
+      "category": "Development",
+      "reason": "Postman gibt es offiziell für Linux.",
+      "reason_en": "Postman is officially available for Linux."
+    },
+    {
+      "name": "Rustup",
+      "aliases": [],
+      "readiness": "green",
+      "category": "Development",
+      "reason": "Rustup und die Rust-Werkzeuge sind unter Linux nativ verfügbar.",
+      "reason_en": "Rustup and the Rust tools are available natively on Linux."
+    },
+    {
+      "name": "JetBrains Toolbox",
+      "aliases": ["CLion", "GoLand", "PhpStorm", "PyCharm", "Rider", "RustRover", "WebStorm", "IntelliJ IDEA", "DataGrip", "DataSpell", "RubyMine"],
+      "readiness": "green",
+      "category": "Development",
+      "reason": "Die JetBrains-IDEs und die Toolbox gibt es offiziell für Linux, mit denselben Funktionen wie unter Windows.",
+      "reason_en": "The JetBrains IDEs and the Toolbox are officially available for Linux, with the same features as on Windows."
+    },
+    {
+      "name": "WeakAuras Companion",
+      "aliases": [],
+      "readiness": "green",
+      "category": "Gaming",
+      "reason": "WeakAuras Companion gibt es für Linux. Die Addons selbst liegen im WoW-Ordner der Wine- oder Proton-Installation.",
+      "reason_en": "WeakAuras Companion is available for Linux. The add-ons themselves live in the WoW folder of the Wine or Proton installation."
+    },
+    {
+      "name": "Wago App",
+      "aliases": [],
+      "readiness": "green",
+      "category": "Gaming",
+      "reason": "Die Wago App gibt es für Linux. Sie muss auf den WoW-Ordner der Wine- oder Proton-Installation zeigen.",
+      "reason_en": "The Wago App is available for Linux. It has to point to the WoW folder of the Wine or Proton installation."
+    },
+    {
+      "name": "CurseForge",
+      "aliases": [],
+      "readiness": "green",
+      "category": "Gaming",
+      "reason": "Die CurseForge-App gibt es für Linux als AppImage und .deb.",
+      "reason_en": "The CurseForge app is available for Linux as an AppImage and .deb."
+    },
+    {
+      "name": "Todoist",
+      "aliases": [],
+      "readiness": "green",
+      "category": "Productivity",
+      "reason": "Todoist gibt es offiziell für Linux als AppImage und Snap.",
+      "reason_en": "Todoist is officially available for Linux as an AppImage and Snap."
+    },
+    {
+      "name": "Miro",
+      "aliases": [],
+      "readiness": "yellow",
+      "category": "Productivity",
+      "reason": "Miro hat keine Desktop-App für Linux, läuft im Browser aber vollständig.",
+      "reason_en": "Miro has no desktop app for Linux, but works fully in the browser.",
+      "alternatives": ["Miro im Browser"],
+      "alternatives_en": ["Miro in the browser"]
+    },
+    {
+      "name": "vidIQ",
+      "aliases": [],
+      "readiness": "yellow",
+      "category": "Streaming",
+      "reason": "vidIQ gibt es nicht als Linux-Desktop-App. Die Browser-Erweiterung und die Web-App funktionieren aber.",
+      "reason_en": "vidIQ is not available as a Linux desktop app. The browser extension and the web app work, though.",
+      "alternatives": ["vidIQ im Browser"],
+      "alternatives_en": ["vidIQ in the browser"]
+    },
+    {
+      "name": "REDlauncher",
+      "aliases": [],
+      "readiness": "yellow",
+      "category": "Gaming",
+      "reason": "Der Launcher für Cyberpunk 2077 und The Witcher 3 läuft unter Linux meist automatisch über Steam/Proton oder bei GOG über Heroic.",
+      "reason_en": "The launcher for Cyberpunk 2077 and The Witcher 3 usually runs automatically on Linux via Steam/Proton or, for GOG, via Heroic.",
+      "alternatives": ["Steam/Proton", "Heroic Games Launcher"]
+    },
+    {
+      "name": "Krisp",
+      "aliases": ["KrispDriversInstaller"],
+      "readiness": "yellow",
+      "category": "Communication",
+      "reason": "Die Krisp-App gibt es nicht für Linux. In Discord ist die Krisp-Rauschunterdrückung eingebaut, sonst helfen NoiseTorch oder EasyEffects.",
+      "reason_en": "The Krisp app is not available for Linux. Discord has Krisp noise suppression built in; otherwise NoiseTorch or EasyEffects help.",
+      "alternatives": ["Discord-Rauschunterdrückung", "NoiseTorch", "EasyEffects"],
+      "alternatives_en": ["Discord noise suppression", "NoiseTorch", "EasyEffects"]
+    },
+    {
+      "name": "League of Legends",
+      "aliases": ["Riot Client", "Riot Vanguard", "Valorant"],
+      "readiness": "red",
+      "category": "Gaming",
+      "reason": "Riot-Spiele wie League of Legends und Valorant nutzen den Anti-Cheat Vanguard und laufen unter Linux nicht, auch nicht über Wine oder Proton.",
+      "reason_en": "Riot games such as League of Legends and Valorant use the Vanguard anti-cheat and do not run on Linux, not even via Wine or Proton.",
+      "alternatives": ["Windows Dualboot"],
+      "alternatives_en": ["Windows dual boot"]
+    },
+    {
+      "name": "Autodesk Fusion",
+      "aliases": ["Autodesk Fusion 360", "Fusion 360"],
+      "readiness": "red",
+      "category": "CAD",
+      "reason": "Keine Linux-Version. Inoffizielle Wine-Lösungen gibt es, sie sind aber unzuverlässig.",
+      "reason_en": "No Linux version. Unofficial Wine workarounds exist, but they are unreliable.",
+      "alternatives": ["FreeCAD", "Onshape im Browser", "Windows Dualboot"],
+      "alternatives_en": ["FreeCAD", "Onshape in the browser", "Windows dual boot"]
     }
   ]
 }
