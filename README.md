@@ -1,10 +1,10 @@
 # Linux Readiness Check
 
-Öffentliches Repo der App [Linux Readiness Check](https://frumpellabs.de) von Frumpel Labs, die einschätzt, wie gut ein Windows-PC für einen Umstieg auf Linux vorbereitet ist.
+Öffentliches Repo der App [Linux Readiness Check](https://frumpellabs.de/linux-readiness-check) von Frumpel Labs, die einschätzt, wie gut ein Windows-PC für einen Umstieg auf Linux vorbereitet ist.
 
 ## Download
 
-Die aktuelle Version findest du unter **[Releases](https://github.com/MaBeink/linux-readiness-check-public/releases/latest)**: den Windows-Installer (Datei endet auf `-setup.exe`), Linux-Pakete (`.AppImage`, `.deb`) und `SHA256SUMS.txt` zum Prüfen. Neuere Versionen kannst du danach direkt in der App installieren.
+Die aktuelle Version findest du unter **[Releases](https://github.com/MaBeink/linux-readiness-check-public/releases/latest)**: den Windows-Installer (Datei endet auf `_x64-setup.exe`, für ARM-Geräte auf `_arm64-setup.exe`), Linux-Pakete (`.AppImage`, `.deb`, jeweils für x64 und ARM64) und `SHA256SUMS.txt` zum Prüfen. Neuere Versionen kannst du danach direkt in der App installieren.
 
 ## Programmliste
 
@@ -25,9 +25,9 @@ Die Daten in diesem Repo stehen unter [CC BY 4.0](LICENSE). Du darfst sie mit Na
 
 ## English
 
-Public repository of the app [Linux Readiness Check](https://frumpellabs.de) by Frumpel Labs, which assesses how well a Windows PC is prepared for switching to Linux.
+Public repository of the app [Linux Readiness Check](https://frumpellabs.de/linux-readiness-check) by Frumpel Labs, which assesses how well a Windows PC is prepared for switching to Linux.
 
-- **Download:** the current version is under **[Releases](https://github.com/MaBeink/linux-readiness-check-public/releases/latest)**: the Windows installer (file ending in `-setup.exe`), Linux packages (`.AppImage`, `.deb`) and `SHA256SUMS.txt` for checking. Later versions can be installed directly in the app.
+- **Download:** the current version is under **[Releases](https://github.com/MaBeink/linux-readiness-check-public/releases/latest)**: the Windows installer (file ending in `_x64-setup.exe`, for ARM devices `_arm64-setup.exe`), Linux packages (`.AppImage`, `.deb`, each for x64 and ARM64) and `SHA256SUMS.txt` for checking. Later versions can be installed directly in the app.
 - **`rules.json`:** the ratings. The app loads them when “Load list and updates” is ticked on the start screen.
 - **`pending.json`:** programs that still lack experience reports. The app shows them under “Rate programs”.
 - Loading these files sends no data about your PC.
