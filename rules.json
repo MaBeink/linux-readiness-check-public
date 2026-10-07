@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "rules_version": "2026-10-04.1",
+  "rules_version": "2026-10-07.1",
   "rules": [
     {
       "name": "Firefox",
@@ -1367,6 +1367,79 @@
       "reason_en": "No Linux version. Unofficial Wine workarounds exist, but they are unreliable.",
       "alternatives": ["FreeCAD", "Onshape im Browser", "Windows Dualboot"],
       "alternatives_en": ["FreeCAD", "Onshape in the browser", "Windows dual boot"]
+    },
+    {
+      "name": "Thunderbird",
+      "aliases": ["Mozilla Thunderbird"],
+      "readiness": "green",
+      "category": "Communication",
+      "reason": "Thunderbird ist unter Linux nativ verfügbar. Das Profil mit Mails und Einstellungen lässt sich übernehmen.",
+      "reason_en": "Thunderbird is available natively on Linux. Your profile with mail and settings can be carried over."
+    },
+    {
+      "name": "WinRAR",
+      "aliases": ["WinRAR"],
+      "readiness": "green",
+      "category": "Tools",
+      "reason": "WinRAR gibt es unter Linux nur als Kommandozeilenprogramm. RAR-Archive öffnen die üblichen Archivmanager aber problemlos.",
+      "reason_en": "WinRAR is only available as a command-line tool on Linux. The usual archive managers open RAR archives without problems, though.",
+      "alternatives": ["Ark", "Datei-Roller", "PeaZip", "7-Zip"],
+      "alternatives_en": ["Ark", "File Roller", "PeaZip", "7-Zip"]
+    },
+    {
+      "name": "PDF24 Creator",
+      "aliases": ["PDF24"],
+      "readiness": "yellow",
+      "category": "PDF",
+      "reason": "PDF24 Creator gibt es nicht für Linux. Zusammenfügen, Umwandeln und Verkleinern gehen mit Linux-Programmen oder den PDF24-Tools im Browser.",
+      "reason_en": "PDF24 Creator is not available for Linux. Merging, converting and compressing work with Linux programs or the PDF24 tools in the browser.",
+      "alternatives": ["PDF Arranger", "Okular", "LibreOffice", "PDF24-Tools im Browser"],
+      "alternatives_en": ["PDF Arranger", "Okular", "LibreOffice", "PDF24 tools in the browser"]
+    },
+    {
+      "name": "RustDesk",
+      "aliases": ["RustDesk"],
+      "readiness": "green",
+      "category": "Remote Access",
+      "reason": "RustDesk ist unter Linux verfügbar.",
+      "reason_en": "RustDesk is available on Linux."
+    },
+    {
+      "name": "VMware Player",
+      "aliases": ["VMware Workstation", "VMware Workstation Player"],
+      "readiness": "green",
+      "category": "Tools",
+      "reason": "VMware Workstation gibt es auch für Linux und ist für private Nutzung kostenlos. Alternativ laufen virtuelle Maschinen mit VirtualBox oder GNOME Boxes.",
+      "reason_en": "VMware Workstation is also available for Linux and is free for personal use. Alternatively, VirtualBox or GNOME Boxes run virtual machines.",
+      "alternatives": ["VMware Workstation für Linux", "VirtualBox", "GNOME Boxes", "virt-manager"],
+      "alternatives_en": ["VMware Workstation for Linux", "VirtualBox", "GNOME Boxes", "virt-manager"]
+    },
+    {
+      "name": "UltraISO",
+      "aliases": ["UltraISO Premium"],
+      "readiness": "green",
+      "category": "Tools",
+      "reason": "ISO-Dateien bindet Linux direkt im Dateimanager ein. Zum Erstellen und Bearbeiten gibt es eigene Werkzeuge.",
+      "reason_en": "Linux mounts ISO files directly in the file manager. There are dedicated tools for creating and editing them.",
+      "alternatives": ["ISO Master", "K3b", "Brasero", "xorriso"]
+    },
+    {
+      "name": "Supermium",
+      "aliases": ["Supermium"],
+      "readiness": "green",
+      "category": "Browser",
+      "reason": "Supermium ist ein Chromium-Ableger für ältere Windows-Versionen. Unter Linux laufen Chromium und andere aktuelle Browser direkt.",
+      "reason_en": "Supermium is a Chromium fork for older Windows versions. On Linux, Chromium and other current browsers run directly.",
+      "alternatives": ["Chromium", "Firefox", "Brave"]
+    },
+    {
+      "name": "Canon IJ Scan Utility",
+      "aliases": ["IJ Scan Utility"],
+      "readiness": "yellow",
+      "category": "Devices",
+      "reason": "Das Canon-Scanprogramm gibt es nicht für Linux. Viele Canon-Geräte scannen über SANE mit Simple Scan oder Skanlite, für manche bietet Canon ScanGear MP an. Dein Modell vorher prüfen.",
+      "reason_en": "Canon's scanning app is not available for Linux. Many Canon devices scan via SANE with Simple Scan or Skanlite, and Canon offers ScanGear MP for some. Check your model first.",
+      "alternatives": ["Simple Scan", "Skanlite", "Canon ScanGear MP"]
     }
   ]
 }
