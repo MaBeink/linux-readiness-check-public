@@ -42,6 +42,54 @@
       "category": "Gaming",
       "description": "Prüft Abbilder von Xbox-360-Spielen.",
       "description_en": "Checks Xbox 360 game images."
+    },
+    {
+      "name": "Puzzle Pirates",
+      "category": "Gaming",
+      "description": "Online-Piratenspiel mit Rätsel-Minispielen.",
+      "description_en": "Online pirate game with puzzle mini-games."
+    },
+    {
+      "name": "Command & Conquer 3",
+      "category": "Gaming",
+      "description": "Echtzeit-Strategiespiel.",
+      "description_en": "Real-time strategy game."
+    },
+    {
+      "name": "Star Wars Battlefront II",
+      "category": "Gaming",
+      "description": "Actionspiel im Star-Wars-Universum.",
+      "description_en": "Action game in the Star Wars universe."
+    },
+    {
+      "name": "Star Wars: Republic Commando",
+      "category": "Gaming",
+      "description": "Taktik-Shooter im Star-Wars-Universum.",
+      "description_en": "Tactical shooter in the Star Wars universe."
+    },
+    {
+      "name": "Unreal Tournament 2004",
+      "category": "Gaming",
+      "description": "Arena-Shooter.",
+      "description_en": "Arena shooter."
+    },
+    {
+      "name": "Diablo IV",
+      "category": "Gaming",
+      "description": "Action-Rollenspiel über Battle.net.",
+      "description_en": "Action role-playing game via Battle.net."
+    },
+    {
+      "name": "Path of Building",
+      "category": "Gaming",
+      "description": "Planungswerkzeug für Path of Exile.",
+      "description_en": "Build planner for Path of Exile."
+    },
+    {
+      "name": "ProSAFE Plus Utility",
+      "category": "Network",
+      "description": "Konfiguration von Netgear-Switches.",
+      "description_en": "Configuration of Netgear switches."
     }
   ]
 }
