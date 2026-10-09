@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "rules_version": "2026-10-07.1",
+  "rules_version": "2026-10-09.1",
   "rules": [
     {
       "name": "Firefox",
@@ -601,7 +601,7 @@
     },
     {
       "name": "Logitech G HUB",
-      "aliases": ["Logitech G HUB", "LGHUB"],
+      "aliases": ["Logitech G HUB", "LGHUB", "Logitech Gaming Software"],
       "readiness": "yellow",
       "category": "Hardware",
       "reason": "Logitech G HUB hat keinen offiziellen Linux-Workflow. Viele Geräte funktionieren grundlegend, Makros, Profile und Beleuchtung brauchen ggf. Community-Tools.",
@@ -792,7 +792,7 @@
     },
     {
       "name": "AMD Software",
-      "aliases": ["AMD Software"],
+      "aliases": ["AMD Software", "AMD Settings"],
       "readiness": "yellow",
       "category": "Hardware",
       "reason": "AMD-Grafik funktioniert unter Linux meist gut, die Windows-Software selbst gibt es dort aber nicht als identischen Workflow.",
@@ -810,7 +810,7 @@
     },
     {
       "name": "AMD Ryzen Master",
-      "aliases": ["AMD Ryzen Master", "AMD Ryzen Master SDK"],
+      "aliases": ["AMD Ryzen Master", "AMD Ryzen Master SDK", "RyzenMasterSDK"],
       "readiness": "yellow",
       "category": "Hardware",
       "reason": "AMD Ryzen Master ist Windows-orientiert. Monitoring und Tuning sind unter Linux möglich, aber mit anderen Werkzeugen und vorsichtigerem Workflow.",
@@ -819,7 +819,7 @@
     },
     {
       "name": "NVIDIA Grafiktreiber",
-      "aliases": ["NVIDIA Grafiktreiber", "NVIDIA Graphics Driver"],
+      "aliases": ["NVIDIA Grafiktreiber", "NVIDIA Graphics Driver", "NVIDIA App", "NvCpl"],
       "readiness": "yellow",
       "category": "Hardware",
       "reason": "NVIDIA-Grafik ist unter Linux nutzbar, braucht aber je nach Distribution, Treiber, Wayland und Standby-Verhalten Aufmerksamkeit.",
@@ -1440,6 +1440,355 @@
       "reason": "Das Canon-Scanprogramm gibt es nicht für Linux. Viele Canon-Geräte scannen über SANE mit Simple Scan oder Skanlite, für manche bietet Canon ScanGear MP an. Dein Modell vorher prüfen.",
       "reason_en": "Canon's scanning app is not available for Linux. Many Canon devices scan via SANE with Simple Scan or Skanlite, and Canon offers ScanGear MP for some. Check your model first.",
       "alternatives": ["Simple Scan", "Skanlite", "Canon ScanGear MP"]
+    },
+    {
+      "name": "AusweisApp",
+      "readiness": "green",
+      "category": "Tools",
+      "reason": "Die AusweisApp gibt es offiziell auch für Linux, zum Beispiel als Flatpak.",
+      "reason_en": "AusweisApp is officially available for Linux too, for example as a Flatpak."
+    },
+    {
+      "name": "Google Earth Pro",
+      "readiness": "green",
+      "category": "Tools",
+      "reason": "Google Earth Pro gibt es als Linux-Version direkt von Google.",
+      "reason_en": "Google Earth Pro is available as a Linux version directly from Google."
+    },
+    {
+      "name": "Java",
+      "aliases": ["Java 8 Update"],
+      "readiness": "green",
+      "category": "Development",
+      "reason": "Java läuft unter Linux nativ, zum Beispiel mit OpenJDK aus der Paketverwaltung.",
+      "reason_en": "Java runs natively on Linux, for example with OpenJDK from the package manager.",
+      "alternatives": ["OpenJDK"]
+    },
+    {
+      "name": "Logitech Options",
+      "aliases": ["Logi Options+", "Logi Bolt"],
+      "readiness": "yellow",
+      "category": "Hardware",
+      "reason": "Die Logitech-Software gibt es nicht für Linux. Mäuse und Tastaturen funktionieren trotzdem, Tastenbelegung und Unifying- oder Bolt-Empfänger lassen sich mit Solaar einrichten.",
+      "reason_en": "Logitech's software is not available for Linux. Mice and keyboards still work; button mapping and Unifying or Bolt receivers can be set up with Solaar.",
+      "alternatives": ["Solaar", "Piper"]
+    },
+    {
+      "name": "Armoury Crate",
+      "aliases": ["ARMOURY CRATE Lite Service"],
+      "readiness": "yellow",
+      "category": "Hardware",
+      "reason": "Armoury Crate gibt es nicht für Linux. ASUS-Laptops lassen sich mit asusctl steuern, die Beleuchtung mit OpenRGB.",
+      "reason_en": "Armoury Crate is not available for Linux. ASUS laptops can be controlled with asusctl, lighting with OpenRGB.",
+      "alternatives": ["asusctl", "OpenRGB", "BIOS/UEFI"]
+    },
+    {
+      "name": "MEGAsync",
+      "aliases": ["MEGA Desktop App"],
+      "readiness": "green",
+      "category": "Cloud Sync",
+      "reason": "MEGA bietet seinen Sync-Client auch für Linux an.",
+      "reason_en": "MEGA offers its sync client for Linux too."
+    },
+    {
+      "name": "ClipGrab",
+      "readiness": "green",
+      "category": "Downloads",
+      "reason": "ClipGrab gibt es auch als Linux-Version.",
+      "reason_en": "ClipGrab is also available as a Linux version.",
+      "alternatives": ["yt-dlp"]
+    },
+    {
+      "name": "SABnzbd",
+      "readiness": "green",
+      "category": "Downloads",
+      "reason": "SABnzbd läuft unter Linux nativ und steckt in vielen Paketquellen.",
+      "reason_en": "SABnzbd runs natively on Linux and is in many package repositories."
+    },
+    {
+      "name": "ProSAFE Plus Utility",
+      "aliases": ["NETGEAR ProSAFE Plus Utility"],
+      "readiness": "yellow",
+      "category": "Network",
+      "reason": "Das Netgear-Konfigurationsprogramm gibt es nur für Windows. Viele dieser Switches lassen sich auch über ihre Weboberfläche einrichten, sonst hilft eine Windows-VM.",
+      "reason_en": "Netgear's configuration tool is Windows-only. Many of these switches can also be set up through their web interface; otherwise a Windows VM helps.",
+      "alternatives": ["Weboberfläche des Switches", "Windows-VM"],
+      "alternatives_en": ["switch web interface", "Windows VM"]
+    },
+    {
+      "name": "Puzzle Pirates",
+      "readiness": "green",
+      "category": "Gaming",
+      "reason": "Puzzle Pirates hat einen Linux-Client, auch über Steam.",
+      "reason_en": "Puzzle Pirates has a Linux client, also via Steam."
+    },
+    {
+      "name": "Command & Conquer 3",
+      "aliases": ["Command and Conquer 3"],
+      "readiness": "yellow",
+      "category": "Gaming",
+      "reason": "Command & Conquer 3 läuft meist gut über Proton oder Lutris, braucht aber etwas Einrichtung.",
+      "reason_en": "Command & Conquer 3 usually runs well via Proton or Lutris but needs some setup.",
+      "alternatives": ["Proton", "Lutris"]
+    },
+    {
+      "name": "Star Wars Battlefront II",
+      "aliases": ["STAR WARS™ Battlefront™ II"],
+      "readiness": "yellow",
+      "category": "Gaming",
+      "reason": "Battlefront II läuft in der Regel über Proton. Vorher auf ProtonDB die eigene Version prüfen.",
+      "reason_en": "Battlefront II usually runs via Proton. Check your version on ProtonDB first.",
+      "alternatives": ["Proton", "ProtonDB"]
+    },
+    {
+      "name": "Star Wars: Republic Commando",
+      "aliases": ["Star Wars™: Republic Commando"],
+      "readiness": "yellow",
+      "category": "Gaming",
+      "reason": "Republic Commando läuft in der Regel über Proton.",
+      "reason_en": "Republic Commando usually runs via Proton.",
+      "alternatives": ["Proton"]
+    },
+    {
+      "name": "Unreal Tournament 2004",
+      "readiness": "green",
+      "category": "Gaming",
+      "reason": "Unreal Tournament 2004 läuft mit dem Community-Patch von OldUnreal nativ unter Linux.",
+      "reason_en": "Unreal Tournament 2004 runs natively on Linux with the OldUnreal community patch.",
+      "alternatives": ["OldUnreal-Patch"],
+      "alternatives_en": ["OldUnreal patch"]
+    },
+    {
+      "name": "Diablo IV",
+      "readiness": "yellow",
+      "category": "Gaming",
+      "reason": "Diablo IV läuft über Battle.net mit Proton oder Lutris bei vielen gut.",
+      "reason_en": "Diablo IV runs well for many people through Battle.net with Proton or Lutris.",
+      "alternatives": ["Proton", "Lutris"]
+    },
+    {
+      "name": "Path of Building",
+      "aliases": ["Path of Building Community"],
+      "readiness": "yellow",
+      "category": "Gaming",
+      "reason": "Path of Building läuft unter Linux mit Wine oder Proton.",
+      "reason_en": "Path of Building runs on Linux with Wine or Proton.",
+      "alternatives": ["Wine"]
+    },
+    {
+      "name": "Everything",
+      "readiness": "yellow",
+      "category": "Tools",
+      "reason": "Everything gibt es nicht für Linux. Schnelle Dateisuche bieten FSearch oder die Suche im Dateimanager.",
+      "reason_en": "Everything is not available for Linux. FSearch or the file manager's search offer fast file search.",
+      "alternatives": ["FSearch", "Catfish", "KFind"]
+    },
+    {
+      "name": "Total Commander",
+      "readiness": "yellow",
+      "category": "Tools",
+      "reason": "Total Commander gibt es nicht für Linux. Double Commander ist sehr ähnlich aufgebaut.",
+      "reason_en": "Total Commander is not available for Linux. Double Commander is laid out very similarly.",
+      "alternatives": ["Double Commander", "Krusader"]
+    },
+    {
+      "name": "Vivaldi",
+      "readiness": "green",
+      "category": "Browser",
+      "reason": "Vivaldi ist unter Linux verfügbar.",
+      "reason_en": "Vivaldi is available on Linux."
+    },
+    {
+      "name": "Advanced Renamer",
+      "readiness": "yellow",
+      "category": "Tools",
+      "reason": "Advanced Renamer gibt es nicht für Linux. Viele Dateien auf einmal umbenennen geht mit KRename oder im Dateimanager.",
+      "reason_en": "Advanced Renamer is not available for Linux. KRename or the file manager can rename many files at once.",
+      "alternatives": ["KRename", "Thunar-Massenumbenennung", "GPRename"],
+      "alternatives_en": ["KRename", "Thunar Bulk Rename", "GPRename"]
+    },
+    {
+      "name": "Epson Scan",
+      "aliases": ["Epson Scan 2", "Epson ScanSmart"],
+      "readiness": "yellow",
+      "category": "Devices",
+      "reason": "Epson ScanSmart gibt es nicht für Linux, Epson Scan 2 schon. Viele Epson-Geräte scannen auch über SANE mit Simple Scan. Dein Modell vorher prüfen.",
+      "reason_en": "Epson ScanSmart is not available for Linux, Epson Scan 2 is. Many Epson devices also scan via SANE with Simple Scan. Check your model first.",
+      "alternatives": ["Epson Scan 2 für Linux", "Simple Scan", "Skanlite"],
+      "alternatives_en": ["Epson Scan 2 for Linux", "Simple Scan", "Skanlite"]
+    },
+    {
+      "name": "IONOS HiDrive",
+      "aliases": ["HiDrive"],
+      "readiness": "yellow",
+      "category": "Cloud Sync",
+      "reason": "Für HiDrive gibt es kein Linux-Programm. Der Speicher lässt sich über WebDAV einbinden oder mit rclone synchronisieren.",
+      "reason_en": "There is no HiDrive app for Linux. The storage can be mounted via WebDAV or synced with rclone.",
+      "alternatives": ["WebDAV", "rclone"]
+    },
+    {
+      "name": "4K Video Downloader",
+      "aliases": ["4K Video Downloader+"],
+      "readiness": "green",
+      "category": "Downloads",
+      "reason": "4K Video Downloader gibt es auch für Linux.",
+      "reason_en": "4K Video Downloader is also available for Linux.",
+      "alternatives": ["yt-dlp"]
+    },
+    {
+      "name": "Active@ KillDisk",
+      "readiness": "yellow",
+      "category": "Storage",
+      "reason": "Festplatten sicher löschen geht unter Linux mit nwipe oder einem Boot-Stick mit ShredOS.",
+      "reason_en": "On Linux, drives can be wiped securely with nwipe or a ShredOS boot stick.",
+      "alternatives": ["nwipe", "ShredOS"]
+    },
+    {
+      "name": "HDShredder",
+      "readiness": "yellow",
+      "category": "Storage",
+      "reason": "HDShredder gibt es nicht für Linux. Festplatten sicher löschen geht mit nwipe oder einem Boot-Stick mit ShredOS.",
+      "reason_en": "HDShredder is not available for Linux. Drives can be wiped securely with nwipe or a ShredOS boot stick.",
+      "alternatives": ["nwipe", "ShredOS"]
+    },
+    {
+      "name": "Eraser",
+      "readiness": "yellow",
+      "category": "Security",
+      "reason": "Eraser gibt es nicht für Linux. Dateien sicher löschen geht mit BleachBit oder shred.",
+      "reason_en": "Eraser is not available for Linux. BleachBit or shred can delete files securely.",
+      "alternatives": ["BleachBit", "shred"]
+    },
+    {
+      "name": "calibre",
+      "readiness": "green",
+      "category": "Media",
+      "reason": "calibre läuft unter Linux nativ.",
+      "reason_en": "calibre runs natively on Linux."
+    },
+    {
+      "name": "D-Fend Reloaded",
+      "readiness": "yellow",
+      "category": "Gaming",
+      "reason": "D-Fend Reloaded gibt es nicht für Linux. DOS-Spiele laufen dort direkt mit DOSBox Staging oder DOSBox-X.",
+      "reason_en": "D-Fend Reloaded is not available for Linux. DOS games run there directly with DOSBox Staging or DOSBox-X.",
+      "alternatives": ["DOSBox Staging", "DOSBox-X", "Lutris"]
+    },
+    {
+      "name": "DiskGenius",
+      "readiness": "yellow",
+      "category": "Storage",
+      "reason": "DiskGenius gibt es nicht für Linux. Partitionen verwalten und Daten retten geht mit GParted und TestDisk.",
+      "reason_en": "DiskGenius is not available for Linux. GParted and TestDisk handle partitions and data recovery.",
+      "alternatives": ["GParted", "TestDisk", "PhotoRec"]
+    },
+    {
+      "name": "DiskInternals Linux Reader",
+      "readiness": "green",
+      "category": "Storage",
+      "reason": "Unter Linux nicht nötig: Linux liest seine eigenen Dateisysteme direkt.",
+      "reason_en": "Not needed on Linux: Linux reads its own file systems directly."
+    },
+    {
+      "name": "DownloadHelper CoApp",
+      "readiness": "green",
+      "category": "Downloads",
+      "reason": "Den Begleiter für Video DownloadHelper gibt es auch für Linux.",
+      "reason_en": "The companion app for Video DownloadHelper is also available for Linux."
+    },
+    {
+      "name": "DVDFab",
+      "readiness": "yellow",
+      "category": "Video",
+      "reason": "DVDFab gibt es nicht für Linux. DVDs und Blu-rays sichern geht mit MakeMKV, umwandeln mit HandBrake.",
+      "reason_en": "DVDFab is not available for Linux. MakeMKV backs up DVDs and Blu-rays, HandBrake converts them.",
+      "alternatives": ["MakeMKV", "HandBrake"]
+    },
+    {
+      "name": "FanControl",
+      "readiness": "yellow",
+      "category": "Hardware",
+      "reason": "FanControl gibt es nicht für Linux. Lüfterkurven lassen sich mit CoolerControl oder im BIOS einstellen.",
+      "reason_en": "FanControl is not available for Linux. Fan curves can be set with CoolerControl or in the BIOS.",
+      "alternatives": ["CoolerControl", "BIOS/UEFI"]
+    },
+    {
+      "name": "Hybrid",
+      "readiness": "green",
+      "category": "Video",
+      "reason": "Hybrid gibt es auch für Linux.",
+      "reason_en": "Hybrid is also available for Linux."
+    },
+    {
+      "name": "IrfanView",
+      "readiness": "yellow",
+      "category": "Media",
+      "reason": "IrfanView läuft unter Wine, gute native Bildbetrachter gibt es aber auch.",
+      "reason_en": "IrfanView runs under Wine, but there are good native image viewers too.",
+      "alternatives": ["gThumb", "Gwenview", "XnView MP", "nomacs"]
+    },
+    {
+      "name": "MakeMKV",
+      "readiness": "green",
+      "category": "Video",
+      "reason": "MakeMKV gibt es auch für Linux.",
+      "reason_en": "MakeMKV is also available for Linux."
+    },
+    {
+      "name": "MediathekView",
+      "readiness": "green",
+      "category": "Media",
+      "reason": "MediathekView läuft unter Linux nativ.",
+      "reason_en": "MediathekView runs natively on Linux."
+    },
+    {
+      "name": "MKVToolNix",
+      "readiness": "green",
+      "category": "Video",
+      "reason": "MKVToolNix läuft unter Linux nativ.",
+      "reason_en": "MKVToolNix runs natively on Linux."
+    },
+    {
+      "name": "Munt",
+      "aliases": ["munt"],
+      "readiness": "green",
+      "category": "Audio",
+      "reason": "Munt, der MT-32-Emulator, läuft auch unter Linux.",
+      "reason_en": "Munt, the MT-32 emulator, also runs on Linux."
+    },
+    {
+      "name": "Nero Burning ROM",
+      "aliases": ["Nero Express", "Nero Multimedia Suite", "Nero BurnRights", "Nero Control Center", "Nero DiscSpeed", "Nero InfoTool", "Nero RescueAgent"],
+      "readiness": "yellow",
+      "category": "Media",
+      "reason": "Nero gibt es nicht mehr für Linux. Brennen und Kopieren gehen mit K3b oder Brasero.",
+      "reason_en": "Nero is no longer available for Linux. K3b or Brasero handle burning and copying.",
+      "alternatives": ["K3b", "Brasero"]
+    },
+    {
+      "name": "Brother MFL-Pro Suite",
+      "readiness": "yellow",
+      "category": "Devices",
+      "reason": "Die Brother-Suite gibt es nicht für Linux, Drucker- und Scannertreiber aber für viele Modelle. Dein Modell auf der Brother-Supportseite prüfen.",
+      "reason_en": "The Brother suite is not available for Linux, but printer and scanner drivers exist for many models. Check your model on Brother's support site.",
+      "alternatives": ["Brother-Linux-Treiber", "Simple Scan"],
+      "alternatives_en": ["Brother Linux drivers", "Simple Scan"]
+    },
+    {
+      "name": "@BIOS",
+      "readiness": "yellow",
+      "category": "Hardware",
+      "reason": "@BIOS gibt es nicht für Linux. BIOS-Updates gehen direkt im BIOS über Q-Flash.",
+      "reason_en": "@BIOS is not available for Linux. BIOS updates work directly in the BIOS via Q-Flash.",
+      "alternatives": ["Q-Flash"]
+    },
+    {
+      "name": "EasyTune",
+      "readiness": "yellow",
+      "category": "Hardware",
+      "reason": "EasyTune gibt es nicht für Linux. Takt und Lüfter lassen sich im BIOS einstellen, Lüfter auch mit CoolerControl.",
+      "reason_en": "EasyTune is not available for Linux. Clock speeds and fans can be set in the BIOS, fans also with CoolerControl.",
+      "alternatives": ["BIOS/UEFI", "CoolerControl"]
     }
   ]
 }
